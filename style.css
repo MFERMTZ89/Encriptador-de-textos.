@@ -7,18 +7,21 @@
 }
 
 .logo {
-    padding-top: 10px;
-    margin-left: 10px;
+    padding-top: 20px;
+    margin-left: 30px;
     max-width: 100%;
 }
+
 
 main {
     display: flex;
     margin-bottom: 50px;
-    margin-left: 80px;
+    margin-left: 300px;
 }
 
-.text-area {
+
+
+.text-Area {
     border: none;
     color: #0A3871;
     margin-top: 90px;
@@ -29,7 +32,7 @@ main {
     color: #0A3871;
 }
 
-.text-area:focus {
+.text-Area:focus {
     outline: none;
 }
 
@@ -41,7 +44,7 @@ main {
     margin-left: 98px;
     margin-top: 20px;
     padding-left: 20px;
-    position: fixed;
+    position:absolute;
 }
 
 .mensaje:focus {
@@ -80,13 +83,16 @@ main {
     color: #0A3871;
     cursor: pointer;
     height: 67px;
-    margin-left: 108px;
-    margin-top: 402px;
-    position: absolute;
+    margin-left: 120px;
+    margin-top:500px;
+    position:relative;
     width: 336px;
 }
 
-.informacion {
+.informacion::before {
+
+    content: icon;
     color: #495057;
     font-size: 18px;
+  
 }

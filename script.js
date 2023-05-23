@@ -1,15 +1,13 @@
+const textArea = document.querySelector(".text-Area");
+const mensaje = document.querySelector(".mensaje");
+
 function btnEncriptar() {
-    const textArea = document.getElementById("textArea");
-    const mensaje = document.getElementById("mensaje");
   
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
 }
-
-const botonEncriptar = document.getElementById("btnEncriptar");
-botonEncriptar.addEventListener("click", btnEncriptar);
 
 function encriptar(stringEncriptar) {
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -24,15 +22,16 @@ function encriptar(stringEncriptar) {
     return stringEncriptar;
 }
 
-function btnDesencriptar() {
-    const mensaje = document.getElementById("mensaje");
-    const textArea = document.getElementById("textArea");
 
+
+function btnDesencriptar() {
+   
     const textoDesencriptado = desencriptar(mensaje.value);
     textArea.value = textoDesencriptado;
     mensaje.value = "";
     textArea.style.backgroundImage = "none";
 }
+
 function desencriptar(stringDesencriptar) {
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringDesencriptar = stringDesencriptar.toLowerCase();
@@ -45,12 +44,16 @@ function desencriptar(stringDesencriptar) {
 
     return stringDesencriptar;
 }
+
+
+const botonCopiar = document.querySelector(".btn-copiar");
+
+botonCopiar.addEventListener("click",btnCopiar)
+
 function btnCopiar() {
-    const mensaje = document.getElementById("mensaje");
-  
+   
     mensaje.select();
     mensaje.setSelectionRange(0, mensaje.value.length);
     document.execCommand("copy");
 }
-const botonCopiar = document.getElementById("btnCopiar");
-botonCopiar.addEventListener("click", btnCopiar);
+
